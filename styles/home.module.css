@@ -1,0 +1,18 @@
+.like {
+    background-color: white;
+    color: pink;
+    fill: pink;
+}
+
+.unlike {
+    background-color: white;
+    color: pink
+}
+
+.post {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    padding: 5px;
+}
