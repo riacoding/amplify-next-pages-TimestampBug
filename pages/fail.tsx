@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Link from 'next/link'
 import { generateClient } from 'aws-amplify/data'
 import type { Schema } from '@/amplify/data/resource'
 import useCurrentUser from '@/hooks/useCurrentUser'
@@ -29,5 +30,10 @@ export default function ClientSide({}: Props) {
     fetchPostLikes()
   }, [user])
 
-  return <div>failure - see dev tools</div>
+  return (
+    <div>
+      <div>failure - see dev tools</div>
+      <Link href='/'>Back</Link>
+    </div>
+  )
 }
