@@ -16,3 +16,9 @@
     background-color: white;
     padding: 5px;
 }
+
+.error {
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: salmon;
+}

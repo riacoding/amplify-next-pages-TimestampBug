@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
 import { generateClient } from 'aws-amplify/data'
 import { signOut } from 'aws-amplify/auth'
 import type { Schema } from '@/amplify/data/resource'
@@ -8,6 +9,7 @@ import '@aws-amplify/ui-react/styles.css'
 import { timeDifference } from '@/lib/utils'
 import PostDisplay from '@/components/PostDisplay'
 import { useRouter } from 'next/router'
+import styles from '../styles/home.module.css'
 
 const client = generateClient<Schema>()
 
@@ -88,12 +90,16 @@ export default function App() {
       {() => (
         <main>
           <h1>My Posts</h1>
+          <div className={styles.error}>
+            <Link href='/fail'>See Failure page</Link>
+          </div>
           <button onClick={createPost}>+ new</button>
           <ul>
             {mergedPosts.map((post) => (
               <PostDisplay key={post.id} post={post} deletePost={deletePost} />
             ))}
           </ul>
+
           <div>
             🥳 App successfully hosted. Try creating a new Post.
             <br />
