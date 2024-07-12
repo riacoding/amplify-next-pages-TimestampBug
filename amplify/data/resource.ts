@@ -12,7 +12,6 @@ const schema = a.schema({
     .model({
       content: a.string(),
       isDone: a.boolean(),
-      timestamp: a.timestamp(),
     })
     .authorization((allow) => [allow.owner(), allow.authenticated().to(['read'])]),
   PostLikes: a

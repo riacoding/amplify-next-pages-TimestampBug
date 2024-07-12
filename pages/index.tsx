@@ -90,6 +90,7 @@ export default function App() {
       {() => (
         <main>
           <h1>My Posts</h1>
+          <h3>Add some Posts and then like some and view failure page</h3>
           <div className={styles.error}>
             <Link href='/fail'>See Failure page</Link>
           </div>
